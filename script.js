@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 const lista = document.getElementById("lista");
+const installBtn = document.getElementById('installBtn');
 let entradas = JSON.parse(localStorage.getItem("entradas")) || [];
 
 function salvarLocal() {
@@ -47,4 +48,25 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
+  installBtn.style.display = 'block';
 });
+
+installBtn.addEventListener('click', async () => {
+  installBtn.style.display = 'none';
+  
+  deferredPrompt.prompt();
+  
+  const { outcome } = await deferredPrompt.userChoice;
+  console.log(`Usuário respondeu: ${outcome}`);
+  
+  deferredPrompt = null;
+});
+
+// Registrar Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log('SW registrado'))
+      .catch(err => console.log('Erro SW:', err));
+  });
+}

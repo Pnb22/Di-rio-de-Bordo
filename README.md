@@ -23,6 +23,7 @@ Um aplicativo web progressivo (PWA) para registro de atividades diárias.
 
 - O app pode ser instalado na tela inicial.
 - Funciona offline graças ao service worker.
+- Teste com um servidor local (por exemplo, `npx http-server`) para que o navegador registre o service worker corretamente.
 
 ## Teste
 

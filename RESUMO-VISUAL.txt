@@ -1,0 +1,11 @@
+﻿Projeto pronto para entrega.
+
+Arquivos principais:
+- index.html
+- style.css
+- script.js
+- service-worker.js
+- manifest.json
+- icons/icon-512.png
+
+O projeto foi reorganizado para melhorar performance e permitir o uso como PWA. A documentação foi simplificada para facilitar a leitura.

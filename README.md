@@ -1,43 +1,30 @@
-# Diário de Bordo
+﻿# Diário de Bordo
 
-Um aplicativo web progressivo (PWA) para registro de atividades diárias.
+Projeto PWA para registrar notas diárias. O objetivo deste projeto é melhorar a performance e deixar a aplicação com PWA funcional.
 
-## Funcionalidades
+## O que foi feito
+- Ajustei o `index.html` para incluir meta tags de PWA e SEO.
+- Adicionei `defer` no script para evitar bloqueio de renderização.
+- Ajustei o `style.css` para usar `box-sizing` e `contain`.
+- Atualizei `script.js` para validar o formulário e remover `console.log`.
+- Melhorei `service-worker.js` para cache e suporte offline.
+- Criei `icons/icon-512.png` e corrigi o `manifest.json`.
 
-- Criar entradas com título, descrição e data
-- Listar entradas registradas
-- Remover entradas
-- Funciona offline
-- Instalável na tela inicial
-- Dados persistidos localmente com localStorage
-- Design responsivo
+## Resultados esperados
+- Carregamento mais rápido.
+- PWA instalável.
+- Funciona offline de forma mais estável.
+- Menos mudança de layout durante o carregamento.
 
-## Como usar
+## Arquivos alterados
+- `index.html`
+- `style.css`
+- `script.js`
+- `service-worker.js`
+- `manifest.json`
+- `icons/icon-512.png`
 
-1. Abra o `index.html` em um navegador.
-2. Preencha o formulário e clique em "Adicionar".
-3. As entradas aparecerão na lista abaixo.
-4. Para remover, clique em "Excluir".
-
-## PWA
-
-- O app pode ser instalado na tela inicial.
-- Funciona offline graças ao service worker.
-- Teste com um servidor local (por exemplo, `npx http-server`) para que o navegador registre o service worker corretamente.
-
-## Teste
-
-Use o Lighthouse do Chrome DevTools para verificar se é reconhecido como PWA.
-
-## Ícones
-
-Adicione os ícones `icon-192.png` e `icon-512.png` na pasta `icons/`. Você pode gerar ícones simples ou usar ferramentas online para criar ícones para PWA.
-
-## Estrutura do projeto
-
-- `index.html`: Estrutura da página
-- `style.css`: Estilos
-- `script.js`: Lógica JavaScript
-- `manifest.json`: Manifesto PWA
-- `service-worker.js`: Service Worker para cache
-- `icons/`: Pasta com ícones
+## Como testar
+1. Use `http-server` ou outro servidor local.
+2. Abra `http://localhost:8000`.
+3. Verifique o app e o service worker no DevTools.
